@@ -770,46 +770,35 @@ select {
   font-size: 2.5rem;
 }
 
-.sym-dy {
-  top: 88%;
-  left: 85%;
-  color: #2dd4bf;
-  animation: mathMove2 15s ease-in-out infinite !important;
-  font-size: 1.8rem;
-}
+.sym-sigma { top: 48%; left: 32%; color: #a855f7; animation: mathMove1 16s ease-in-out infinite !important; opacity: 0.15; }
 
-.sym-sigma {
-  top: 48%;
-  left: 32%;
-  color: #a855f7;
-  animation: mathMove1 16s ease-in-out infinite !important;
-  opacity: 0.15;
-}
+/* Level 3 symbol styles */
+.sym-partial { top: 65%; left: 28%; color: #3b82f6; animation: mathMove3 15s ease-in-out infinite !important; font-size: 2.5rem; opacity: 0.12; }
+.sym-grad { top: 22%; left: 78%; color: #ef4444; animation: mathMove3 18s ease-in-out infinite reverse !important; opacity: 0.14; }
+.sym-prod { top: 5%; left: 15%; color: #10b981; animation: mathMove2 20s ease-in-out infinite !important; opacity: 0.1; }
+.sym-prop { top: 72%; left: 92%; color: #8b5cf6; animation: mathMove1 14s ease-in-out infinite reverse !important; opacity: 0.15; }
+.sym-belongs { top: 38%; left: 5%; color: #f59e0b; animation: mathMove3 16s ease-in-out infinite !important; opacity: 0.1; }
+.sym-forall { top: 92%; left: 45%; color: #ec4899; animation: mathMove2 17s ease-in-out infinite reverse !important; opacity: 0.12; }
+.sym-exists { top: 18%; left: 3%; color: #06b6d4; animation: mathMove3 19s ease-in-out infinite !important; opacity: 0.15; }
+.sym-angle { top: 52%; left: 95%; color: #fca5a5; animation: mathMove1 13s ease-in-out infinite !important; opacity: 0.14; }
+.sym-mu { top: 7%; left: 55%; color: #84cc16; animation: mathMove3 22s ease-in-out infinite reverse !important; opacity: 0.12; }
+.sym-rho { top: 82%; left: 62%; color: #2dd4bf; animation: mathMove2 15s ease-in-out infinite !important; }
+.sym-tau { top: 35%; left: 28%; color: #a855f7; animation: mathMove3 14s ease-in-out infinite !important; opacity: 0.1; }
+.sym-phi { top: 58%; left: 78%; color: #3b82f6; animation: mathMove1 17s ease-in-out infinite reverse !important; opacity: 0.12; }
+.sym-double-int { top: 88%; left: 12%; color: #ef4444; animation: mathMove3 20s ease-in-out infinite !important; font-size: 2.8rem; opacity: 0.18; }
 
 @keyframes mathMove1 {
-
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0) rotate(0deg);
-  }
-
-  33% {
-    transform: translate3d(25px, -45px, 0) rotate(20deg);
-  }
-
-  66% {
-    transform: translate3d(-20px, 15px, 0) rotate(-15deg);
-  }
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  33% { transform: translate3d(25px, -45px, 0) rotate(20deg); }
+  66% { transform: translate3d(-20px, 15px, 0) rotate(-15deg); }
 }
 
 @keyframes mathMove2 {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(-35px, 20px, 0) rotate(-25deg); }
+}
 
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0) rotate(0deg);
-  }
-
-  50% {
-    transform: translate3d(-35px, 20px, 0) rotate(-25deg);
-  }
+@keyframes mathMove3 {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(40px, 40px, 0) rotate(45deg); }
 }

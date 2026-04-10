@@ -26,8 +26,21 @@ const FloatingSymbols = ({ isFixed = false }) => {
       <span className="symbol sym-approx">≈</span>
       <span className="symbol sym-noteq">≠</span>
       <span className="symbol sym-brace">{"{ }"}</span>
-      <span className="symbol sym-dy dx">dy/dx</span>
       <span className="symbol sym-sigma">σ</span>
+      {/* Even more symbols */}
+      <span className="symbol sym-partial">∂</span>
+      <span className="symbol sym-grad">∇</span>
+      <span className="symbol sym-prod">∏</span>
+      <span className="symbol sym-prop">∝</span>
+      <span className="symbol sym-belongs">∈</span>
+      <span className="symbol sym-forall">∀</span>
+      <span className="symbol sym-exists">∃</span>
+      <span className="symbol sym-angle">∠</span>
+      <span className="symbol sym-mu">μ</span>
+      <span className="symbol sym-rho">ρ</span>
+      <span className="symbol sym-tau">τ</span>
+      <span className="symbol sym-phi">φ</span>
+      <span className="symbol sym-double-int">∬</span>
     </div>
   )
 }
