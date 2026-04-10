@@ -57,7 +57,7 @@ function Home() {
           <div className="hero-logo-card glow-card">
             <img src="/logo.jpeg" alt="Maths Pirates glowing logo" loading="lazy" />
           </div>
-          <h1>Turn Confusion Into Clarity ⚡</h1>
+          <h1>Turn Confusion Into Clarity<br></br>⚡</h1>
           <p>Master Maths from Class 6–12, JEE & NEET with Concept-Based Learning.</p>
           <div className="hero-cta">
             <a className="btn btn-primary" href="tel:8685915534">Call Now</a>
