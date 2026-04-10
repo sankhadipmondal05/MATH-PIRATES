@@ -1,0 +1,158 @@
+/* Contact Page Grid */
+.contact-grid {
+  display: grid;
+  gap: 48px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.contact-card,
+.contact-form {
+  background: rgba(255, 255, 255, 0.48);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 32px;
+  box-shadow: 0 20px 45px rgba(17, 17, 17, 0.04);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.contact-card {
+  min-height: auto;
+  align-self: flex-start;
+}
+
+.contact-form {
+  min-height: 420px;
+}
+
+.contact-card:hover,
+.contact-form:hover {
+  background: rgba(255, 255, 255, 0.65);
+  transform: translateY(-10px) scale(1.01);
+  box-shadow: 0 45px 110px rgba(229, 57, 53, 0.15);
+  border-color: rgba(229, 57, 53, 0.2);
+}
+
+.contact-card h2,
+.contact-form h2 {
+  font-size: 1.35rem;
+  margin-bottom: 14px;
+}
+
+.contact-card p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.contact-card a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.contact-card a:hover {
+  opacity: 0.8;
+}
+
+.contact-form {
+  display: grid;
+  gap: 16px;
+}
+
+.contact-form label {
+  font-weight: 600;
+}
+
+.contact-form input,
+.select-trigger {
+  width: 100%;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 16px;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--text);
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.custom-select {
+  position: relative;
+  width: 100%;
+}
+
+.select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23e53935' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  padding-right: 48px;
+  user-select: none;
+}
+
+.custom-select.open .select-trigger {
+  background: #fff;
+  border-color: var(--primary);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: 0 4px 15px rgba(229, 57, 53, 0.08);
+  transform: rotateX(0deg);
+}
+
+.select-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--primary);
+  border-top: none;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 100;
+  box-shadow: 0 20px 40px rgba(17, 17, 17, 0.12);
+  overflow: hidden;
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.select-options li {
+  padding: 14px 18px;
+  font-size: 0.95rem;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.select-options li:hover {
+  background: var(--primary-soft);
+  color: var(--primary);
+  padding-left: 24px;
+}
+
+.select-options li.selected {
+  background: var(--primary);
+  color: #fff;
+}
+
+.contact-form input:focus {
+  outline: none;
+  background: #fff;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(229, 57, 53, 0.1);
+}
+
+.contact-form button {
+  margin-top: 14px;
+}

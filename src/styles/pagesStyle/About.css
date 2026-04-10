@@ -1,0 +1,129 @@
+/* Timeline Section */
+.timeline {
+  display: grid;
+  gap: 24px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.timeline-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e53935, #ff7961);
+  margin-top: 8px;
+}
+
+.timeline-card {
+  /* Inherits glassmorphism from the group rule below */
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(229, 57, 53, 0.12);
+}
+
+.timeline-step {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Methodology & Info */
+.info-grid,
+.methodology-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.method-card,
+.info-card,
+.timeline-card {
+  background: rgba(255, 255, 255, 0.48);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 32px;
+  box-shadow: 0 20px 45px rgba(17, 17, 17, 0.04);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.method-card:hover,
+.info-card:hover,
+.timeline-card:hover {
+  background: rgba(255, 255, 255, 0.65);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 45px 110px rgba(229, 57, 53, 0.15);
+  border-color: rgba(229, 57, 53, 0.2);
+}
+
+.method-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.method-card span {
+  font-size: 2.8rem;
+  margin-bottom: 12px;
+}
+
+.info-card h2,
+.founder-card h2 {
+  font-size: 1.35rem;
+  margin-bottom: 14px;
+}
+
+.method-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 4px; /* Reduced gap between h3 and p */
+}
+
+.method-card p,
+.info-card p,
+.founder-card p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.founder-card {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, #e53935, #ff7961);
+  color: #fff;
+  border: none;
+  box-shadow: 0 30px 70px rgba(229, 57, 53, 0.35);
+}
+
+.founder-card h2 {
+  color: #fff !important;
+  margin-bottom: 20px;
+}
+
+.founder-card p {
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  font-style: italic;
+}
+
+.founder-meta {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.founder-meta span {
+  font-weight: 700;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.founder-meta span:last-child {
+  opacity: 0.8;
+  font-weight: 500;
+}

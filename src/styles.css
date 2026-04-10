@@ -1,0 +1,6 @@
+@import './styles/componentsStyle/components.css';
+@import './styles/pagesStyle/Home.css';
+@import './styles/pagesStyle/About.css';
+@import './styles/pagesStyle/Courses.css';
+@import './styles/pagesStyle/Contact.css';
+@import './styles/responsive.css';
