@@ -43,11 +43,16 @@ function About() {
 
       <section className="section founder-section reveal">
         <div className="founder-card glow-card">
-          <h2>Founder’s Message</h2>
-          <p>“I created Maths Pirates because I saw too many students lose interest in Maths before they understood it. Today, we turn that confusion into a clear path to success with every lesson.”</p>
-          <div className="founder-meta">
-            <span>Founder, Maths Pirates</span>
-            <span>Ambala Cantt, Haryana</span>
+          <div className="founder-image-wrap">
+            <img src="/Hero.png" alt="Founder of Maths Pirates" className="founder-img" />
+          </div>
+          <div className="founder-content">
+            <h2>Founder's Message</h2>
+            <p>"I created Maths Pirates because I saw too many students lose interest in Maths before they understood it. Today, we turn that confusion into a clear path to success with every lesson."</p>
+            <div className="founder-meta">
+              <span>Founder, Maths Pirates</span>
+              <span>Ambala Cantt, Haryana</span>
+            </div>
           </div>
         </div>
       </section>
