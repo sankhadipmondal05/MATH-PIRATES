@@ -156,7 +156,6 @@
   object-fit: cover;
   object-position: top center;
   display: block;
-  mask-image: linear-gradient(to right, black 0%, black 80%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, black 0%, black 80%, transparent 100%);
+  mask-image: linear-gradient(to right, black 0%, black 75%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, black 0%, black 75%, transparent 100%);
 }
-
