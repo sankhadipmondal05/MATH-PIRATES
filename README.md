@@ -2,7 +2,7 @@
 
 A premium, high-fidelity web application for **MATH πRATES** — an elite Maths coaching center focused on bringing conceptual clarity to students from Class 6-12, JEE, and NEET.
 
-![Dashboard Preview](https://via.placeholder.com/1200x600?text=MATH+PIRATES+PREVIEW)
+[View](https://math-pirates.vercel.app/)
 
 ## ✨ Features
 
