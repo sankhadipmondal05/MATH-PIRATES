@@ -115,6 +115,61 @@
     padding-top: 0;
     border-top: none;
   }
+
+  /* Founder Card Responsive */
+  .founder-card {
+    flex-direction: column;
+    position: relative;
+    min-height: 600px;
+    /* Increased from 480px */
+  }
+
+  .founder-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding: 32px 24px;
+    /* Increased padding */
+    flex: unset;
+    background: linear-gradient(to top, rgba(229, 57, 53, 0.9), rgba(229, 57, 53, 0.4) 70%, transparent);
+  }
+
+  .founder-card h2 {
+    font-size: 1.6rem;
+    /* Increased from 0.95rem */
+    margin-bottom: 8px;
+  }
+
+  .founder-card p {
+    font-size: 1.2rem;
+    /* Increased from 0.8rem */
+    line-height: 1.6;
+  }
+
+  .founder-meta {
+    margin-top: 12px;
+    padding-top: 12px;
+  }
+
+  .founder-meta span {
+    font-size: 1.0rem;
+    /* Increased from 0.75rem */
+  }
+
+  .founder-image-wrap {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .founder-img {
+    object-position: top center;
+    mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+  }
 }
 
 @media (max-width: 640px) {
@@ -156,6 +211,25 @@
     margin: 16px auto 0;
     padding: 16px 0;
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .founder-card {
+    min-height: 650px;
+    /* Even more height for very narrow screens */
+  }
+
+  .founder-content {
+    padding: 40px 20px 20px;
+  }
+
+  .founder-card h2 {
+    font-size: 1.25rem;
+  }
+
+  .founder-card p {
+    font-size: 0.95rem;
   }
 }
 
