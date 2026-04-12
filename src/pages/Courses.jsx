@@ -3,24 +3,24 @@ import { useEffect } from 'react'
 const courseList = [
   {
     id: 'foundation',
-    title: 'Class 6–8 Foundation',
-    duration: '6 Months',
+    subjects: 'Math, Science, English, S.St',
+    title: 'Foundation',
     target: 'Class 6-8',
     outcome: 'Build arithmetic confidence, strong fundamentals, and a love for problem solving.',
     features: ['Concept clarity with visual explanations', 'Fun mastery sessions and practice drills', 'Weekly checks and progress reports'],
   },
   {
     id: 'boards',
-    title: 'Class 9–10 Boards',
-    duration: '8 Months',
+    subjects: 'Math, English, S.St',
+    title: 'Boards',
     target: 'Class 9-10',
     outcome: 'Board-centric coaching with exam strategy, concept reinforcement and sample papers.',
     features: ['Chapters taught with board patterns', 'Daily practice and revision plan', 'Doubt clearing and one-on-one support'],
   },
   {
     id: 'advanced',
-    title: 'Class 11–12 Advanced',
-    duration: '10 Months',
+    subjects: 'Maths',
+    title: 'Advanced',
     target: 'Class 11-12',
     outcome: 'Advanced theory and problem solving for strong board and competitive performance.',
     features: ['In-depth concept sessions', 'Advanced application with solved examples', 'Regular milestone tests and doubt clinics'],
@@ -28,17 +28,13 @@ const courseList = [
   {
     id: 'jee',
     title: 'JEE Preparation',
-    duration: '12 Months',
-    target: 'JEE',
-    outcome: 'Rigorous JEE Maths coaching with concept mastery, focus topics and exam simulations.',
+    outcome: 'Rigorous JEE coaching with concept mastery, focus topics and exam simulations.',
     features: ['JEE-style problem solving', 'Speed, accuracy and application drills', 'Mock tests and performance reviews'],
   },
   {
     id: 'neet',
     title: 'NEET Support',
-    duration: '10 Months',
-    target: 'NEET',
-    outcome: 'Targeted NEET Maths training with conceptual clarity and exam-specific practice.',
+    outcome: 'Targeted NEET training with conceptual clarity and exam-specific practice.',
     features: ['Important topics and shortcut methods', 'Question solving under exam conditions', 'Weekly reviews and doubt clearing'],
   },
 ]
@@ -66,8 +62,8 @@ function Courses() {
         {courseList.map((course) => (
           <article key={course.id} className="detail-card reveal" id={course.id}>
             <div className="detail-card-header">
-              <span>{course.title}</span>
-              <h2>{course.duration} • {course.target}</h2>
+              {course.subjects && <p className="subjects-list">{course.subjects}</p>}
+              <h2>{course.title}{course.target && ` • ${course.target}`}</h2>
             </div>
             <p>{course.outcome}</p>
             <ul>

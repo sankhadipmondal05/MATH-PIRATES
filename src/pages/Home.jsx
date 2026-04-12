@@ -10,11 +10,11 @@ const features = [
 ]
 
 const courses = [
-  { icon: '📚', title: 'Class 6–8 Foundation', text: 'Build a strong base with playful, concept-first teaching.' },
-  { icon: '🧮', title: 'Class 9–10 Boards', text: 'Score significantly higher with board-focused strategies and practice.' },
-  { icon: '📈', title: 'Class 11–12 Advanced', text: 'Master concepts with rigorous practice for higher secondary success.' },
-  { icon: '🎯', title: 'JEE Preparation', text: 'Concept-driven coaching designed for top JEE Maths scores.' },
-  { icon: '🩺', title: 'NEET Support', text: 'Targeted Maths coaching to help you clear NEET with confidence.' },
+  { icon: '📚', title: 'Foundation', target: 'Class 6-8', subjects: 'Math, Science, English, S.St', text: 'Build a strong base with playful, concept-first teaching.' },
+  { icon: '🧮', title: 'Boards', target: 'Class 9-10', subjects: 'Math, English, S.St', text: 'Score significantly higher with board-focused strategies.' },
+  { icon: '📈', title: 'Advanced', target: 'Class 11-12', subjects: 'Maths', text: 'Master concepts with rigorous practice for higher secondary success.' },
+  { icon: '🎯', title: 'JEE Preparation', text: 'Concept-driven coaching designed for top JEE scores.' },
+  { icon: '🩺', title: 'NEET Support', text: 'Targeted coaching to help you clear NEET with confidence.' },
 ]
 
 const testimonials = [
@@ -55,7 +55,7 @@ function Home() {
         <div className="hero-content">
           <div className="hero-badge">500+ Students · 90%+ Results</div>
           <div className="hero-logo-card glow-card">
-            <img src="/logo.jpeg" alt="Maths Pirates glowing logo" loading="lazy" />
+            <img src="/logo.jpeg" alt="Maths Pirates glowing logo" loading="lazy" width="100" height="100" />
           </div>
           <h1>Turn Confusion Into Clarity<br></br>⚡</h1>
           <p>Master Maths from Class 6–12, JEE & NEET with Concept-Based Learning.</p>
@@ -119,7 +119,8 @@ function Home() {
           {courses.map((course) => (
             <article key={course.title} className="course-card hover-card reveal">
               <div className="course-icon">{course.icon}</div>
-              <h3>{course.title}</h3>
+              {course.subjects && <p className="course-subjects">{course.subjects}</p>}
+              <h3 className={!course.subjects ? 'no-subjects' : ''}>{course.title}{course.target && ` • ${course.target}`}</h3>
               <p>{course.text}</p>
               <div className="course-actions">
                 <a className="btn btn-small" href="tel:8685915534">Call</a>

@@ -17,6 +17,7 @@
     padding: 16px 16px;
   }
 
+
   .brand {
     flex: 1 1 auto;
     min-width: 0;
@@ -183,6 +184,13 @@
 
   .hero-cta {
     flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+    max-width: 220px;
   }
 
   .section {
@@ -196,8 +204,17 @@
   .method-card,
   .contact-card,
   .contact-form,
-  .founder-card {
+  .founder-card,
+  .testimonial-card {
     padding: 22px;
+  }
+
+  .testimonial-slider {
+    min-height: 280px;
+  }
+
+  .testimonial-card {
+    min-height: 240px;
   }
 
   .course-detail-grid {
@@ -211,6 +228,11 @@
     margin: 16px auto 0;
     padding: 16px 0;
     text-align: center;
+  }
+
+  /* Subject labels responsive */
+  .subjects-list {
+    font-size: 1.1rem !important;
   }
 }
 
@@ -230,6 +252,23 @@
 
   .founder-card p {
     font-size: 0.95rem;
+  }
+
+  .cta-banner-actions {
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cta-banner-actions .btn {
+    flex: 0 1 auto;
+    padding: 12px 18px;
+    font-size: 0.85rem;
+    min-width: 120px;
+  }
+
+  .testimonial-card {
+    min-height: 240px;
   }
 }
 

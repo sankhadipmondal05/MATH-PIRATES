@@ -158,4 +158,5 @@
   display: block;
   mask-image: linear-gradient(to right, black 0%, black 75%, transparent 100%);
   -webkit-mask-image: linear-gradient(to right, black 0%, black 75%, transparent 100%);
+  filter: brightness(1.5) contrast(0.9) saturate(0.9);
 }
