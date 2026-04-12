@@ -107,18 +107,18 @@ h1 {
   min-height: 240px;
 }
 
-.courses-grid {
+.courses-section .courses-grid {
   grid-template-columns: repeat(3, 1fr) !important;
 }
 
 @media (max-width: 980px) {
-  .courses-grid {
+  .courses-section .courses-grid {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
 @media (max-width: 640px) {
-  .courses-grid {
+  .courses-section .courses-grid {
     grid-template-columns: 1fr !important;
   }
 }
@@ -143,6 +143,7 @@ h1 {
   font-size: 0.9rem;
   font-weight: 800;
   background: linear-gradient(135deg, var(--primary), #ff7043);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 8px;
